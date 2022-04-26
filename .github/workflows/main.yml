@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+
+  push:
+
+    branches:
+
+      - master # Changing the branch here would also work
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+
+        with:
+
+          heroku_api_key: "2bd6b83e-deca-4495-9df2-d265c6539bfa"
+
+          heroku_app_name: "hdgyisgvtest" #Must be unique in Heroku
+
+          heroku_email: "satya@gitbot.xyz"
+
+          procfile: "python3 insta.py"
