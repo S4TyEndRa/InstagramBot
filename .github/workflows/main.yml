@@ -28,4 +28,4 @@ jobs:
 
           heroku_email: "satya@gitbot.xyz"
 
-          procfile: "bash start.sh"
+          
